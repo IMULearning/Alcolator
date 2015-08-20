@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AABAF4C1B868FDA0085CDE1 /* WineCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABAF4B1B868FDA0085CDE1 /* WineCalculator.m */; };
+		9AABAF4F1B8690260085CDE1 /* AlcoholCalculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AABAF4E1B8690260085CDE1 /* AlcoholCalculation.m */; };
 		9AC7CB171B866C6E001CCDD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7CB161B866C6E001CCDD1 /* main.m */; };
 		9AC7CB1A1B866C6E001CCDD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7CB191B866C6E001CCDD1 /* AppDelegate.m */; };
 		9AC7CB1D1B866C6E001CCDD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC7CB1C1B866C6E001CCDD1 /* ViewController.m */; };
@@ -27,6 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9AABAF491B868E670085CDE1 /* AlcoholCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlcoholCalculator.h; sourceTree = "<group>"; };
+		9AABAF4A1B868FDA0085CDE1 /* WineCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineCalculator.h; sourceTree = "<group>"; };
+		9AABAF4B1B868FDA0085CDE1 /* WineCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineCalculator.m; sourceTree = "<group>"; };
+		9AABAF4D1B8690260085CDE1 /* AlcoholCalculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlcoholCalculation.h; sourceTree = "<group>"; };
+		9AABAF4E1B8690260085CDE1 /* AlcoholCalculation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlcoholCalculation.m; sourceTree = "<group>"; };
 		9AC7CB111B866C6E001CCDD1 /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC7CB151B866C6E001CCDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AC7CB161B866C6E001CCDD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +96,11 @@
 				9AC7CB211B866C6F001CCDD1 /* Images.xcassets */,
 				9AC7CB231B866C6F001CCDD1 /* LaunchScreen.xib */,
 				9AC7CB141B866C6E001CCDD1 /* Supporting Files */,
+				9AABAF491B868E670085CDE1 /* AlcoholCalculator.h */,
+				9AABAF4A1B868FDA0085CDE1 /* WineCalculator.h */,
+				9AABAF4B1B868FDA0085CDE1 /* WineCalculator.m */,
+				9AABAF4D1B8690260085CDE1 /* AlcoholCalculation.h */,
+				9AABAF4E1B8690260085CDE1 /* AlcoholCalculation.m */,
 			);
 			path = Alcolator;
 			sourceTree = "<group>";
@@ -219,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AABAF4F1B8690260085CDE1 /* AlcoholCalculation.m in Sources */,
+				9AABAF4C1B868FDA0085CDE1 /* WineCalculator.m in Sources */,
 				9AC7CB1D1B866C6E001CCDD1 /* ViewController.m in Sources */,
 				9AC7CB1A1B866C6E001CCDD1 /* AppDelegate.m in Sources */,
 				9AC7CB171B866C6E001CCDD1 /* main.m in Sources */,
@@ -418,6 +432,7 @@
 				9AC7CB361B866C6F001CCDD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AC7CB371B866C6F001CCDD1 /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +441,7 @@
 				9AC7CB391B866C6F001CCDD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
