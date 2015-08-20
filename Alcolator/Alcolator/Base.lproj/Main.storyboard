@@ -42,8 +42,8 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9eK-dE-P6v"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXU-PX-Fnd">
-                                <rect key="frame" x="31" y="149" width="568" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXU-PX-Fnd">
+                                <rect key="frame" x="31" y="149" width="538" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -53,6 +53,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OXU-PX-Fnd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="6zm-Gq-D5W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OXU-PX-Fnd" secondAttribute="trailing" constant="15" id="7Po-cx-tqo"/>
                             <constraint firstItem="0KZ-Qp-8F6" firstAttribute="width" secondItem="vHL-gA-lzB" secondAttribute="width" id="9kK-5k-MrW"/>
                             <constraint firstItem="OXU-PX-Fnd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="15" id="BlJ-Nt-Dhd"/>
                             <constraint firstItem="vHL-gA-lzB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Lfj-IU-JX4"/>
@@ -61,9 +62,16 @@
                             <constraint firstItem="ZxQ-XP-4xT" firstAttribute="centerX" secondItem="0KZ-Qp-8F6" secondAttribute="centerX" constant="0.5" id="eJ9-VA-0lh"/>
                             <constraint firstItem="0KZ-Qp-8F6" firstAttribute="centerX" secondItem="vHL-gA-lzB" secondAttribute="centerX" id="opn-kR-5Md"/>
                             <constraint firstItem="vHL-gA-lzB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="p6w-Wt-Xxq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OXU-PX-Fnd" secondAttribute="trailing" constant="15" id="rpg-CH-qgE"/>
                             <constraint firstItem="ZxQ-XP-4xT" firstAttribute="top" secondItem="0KZ-Qp-8F6" secondAttribute="bottom" constant="8" id="sHd-zW-rcy"/>
                             <constraint firstItem="0KZ-Qp-8F6" firstAttribute="top" secondItem="vHL-gA-lzB" secondAttribute="bottom" constant="8" id="tzP-Rx-SOD"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BlJ-Nt-Dhd"/>
+                                <exclude reference="rpg-CH-qgE"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="lda-lg-TxE" appends="YES" id="2Yl-34-MMz"/>
                         </connections>
