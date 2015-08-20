@@ -26,7 +26,7 @@
                                 <rect key="frame" x="14" y="58" width="572" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxQ-XP-4xT">
-                                <rect key="frame" x="240" y="96" width="120" height="45"/>
+                                <rect key="frame" x="16" y="96" width="568" height="45"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <state key="normal" title="Calculate!">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,6 +44,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OXU-PX-Fnd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="6zm-Gq-D5W"/>
+                            <constraint firstItem="ZxQ-XP-4xT" firstAttribute="width" secondItem="OXU-PX-Fnd" secondAttribute="width" id="73R-yO-ieA"/>
                             <constraint firstItem="0KZ-Qp-8F6" firstAttribute="width" secondItem="vHL-gA-lzB" secondAttribute="width" id="9kK-5k-MrW"/>
                             <constraint firstItem="OXU-PX-Fnd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="15" id="BlJ-Nt-Dhd"/>
                             <constraint firstItem="vHL-gA-lzB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Lfj-IU-JX4"/>
