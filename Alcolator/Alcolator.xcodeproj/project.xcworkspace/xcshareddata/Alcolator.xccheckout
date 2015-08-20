@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>758F8A0F-7D2C-4E3C-8AA1-769DC4CBBC66</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Alcolator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1C3E465CF3B07616CEE1D21B96A689DD937D33A4</key>
 		<string>https://github.com/davidiamyou/Alcolator.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Alcolator/Alcolator.xcodeproj/project.xcworkspace</string>
+	<string>Alcolator/Alcolator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1C3E465CF3B07616CEE1D21B96A689DD937D33A4</key>
