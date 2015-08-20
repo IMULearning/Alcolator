@@ -1,21 +1,21 @@
 //
-//  WineCalculator.m
+//  WhiskeyCalculator.m
 //  Alcolator
 //
 //  Created by Weinan Qiu on 2015-08-20.
 //  Copyright (c) 2015 Bloc. All rights reserved.
 //
 
-#import "WineCalculator.h"
+#import "WhiskeyCalculator.h"
 
-@implementation WineCalculator
+@implementation WhiskeyCalculator
 
 - (instancetype)init {
     self =  [super init];
     
     if (self) {
-        _ouncePerContainer = 5;
-        _concentration = 0.13;
+        _ouncePerContainer = 1;
+        _concentration = 0.4;
     }
     
     return self;
@@ -25,11 +25,11 @@
                                AndOuncePerContainer: (CGFloat) ounces
                                AndNumberOfContainer: (NSInteger) number {
     CGFloat totalAlcoholInOunce = concentration * ounces * number;
-    CGFloat numberOfWine = totalAlcoholInOunce / (self.ouncePerContainer * self.concentration);
+    CGFloat numberOfWhiskey = totalAlcoholInOunce / (self.ouncePerContainer * self.concentration);
     
     AlcoholCalculation *calculation = [AlcoholCalculation new];
-    calculation.numberOfContainer = numberOfWine;
-    calculation.alcoholText = (numberOfWine == 1) ? NSLocalizedString(@"glass of wine", @"singular glass") : NSLocalizedString(@"glasses of wine", @"plural of glass");
+    calculation.numberOfContainer = numberOfWhiskey;
+    calculation.alcoholText = (numberOfWhiskey == 1) ? NSLocalizedString(@"shot of whiskey", @"singular shot") : NSLocalizedString(@"shots of whiskey", @"plural of shot");
     
     return calculation;
 }

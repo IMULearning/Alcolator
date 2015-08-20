@@ -7,8 +7,11 @@
 //
 
 #import "WhiskeyViewController.h"
+#import "WhiskeyCalculator.h"
 
 @interface WhiskeyViewController ()
+
+@property (strong, nonatomic) WhiskeyCalculator *calculator;
 
 @end
 
@@ -16,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.calculator = [WhiskeyCalculator new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +27,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)buttonPressed:(UIButton *)sender {
+    [self.beerPercentTextField resignFirstResponder];
+    
+    NSInteger numberOfBeers = self.beerCountSlider.value;
+    NSInteger ouncesInOneBeerGlass = 12;
+    CGFloat alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100.0;
+    
+    AlcoholCalculation *result = [self.calculator calculateWithConcentration:alcoholPercentageOfBeer AndOuncePerContainer:ouncesInOneBeerGlass AndNumberOfContainer:numberOfBeers];
+    
+    NSString *beerText = (numberOfBeers == 1) ? NSLocalizedString(@"beer", @"singular beer") : NSLocalizedString(@"beers", @"plural of beer");
+    
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], result.numberOfContainer, result.alcoholText];
+    self.resultLabel.text = resultText;
 }
-*/
 
 @end
