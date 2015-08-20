@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "AlcoholCalculator.h"
+#import "AlcoholCalculation.h"
+#import "WineCalculator.h"
 
 @interface ViewController ()
 
@@ -14,13 +17,16 @@
 @property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
+@property (strong, nonatomic) WineCalculator *calculator;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.calculator = [WineCalculator new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,25 +50,15 @@
 - (IBAction)buttonPressed:(UIButton *)sender {
     [self.beerPercentTextField resignFirstResponder];
     
-    // calculate how much alcohol in those beers
     NSInteger numberOfBeers = self.beerCountSlider.value;
     NSInteger ouncesInOneBeerGlass = 12;
     CGFloat alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100.0;
-    CGFloat ouncesOfAlcoholPerBeer = ouncesInOneBeerGlass * alcoholPercentageOfBeer;
-    CGFloat ouncesOfAlcoholTotal = ouncesOfAlcoholPerBeer * numberOfBeers;
     
-    // calculate equivelent amount of wine
-    CGFloat ouncesInOneWineGlass = 5;
-    CGFloat alcoholPercentageOfWine = 0.13;
-    CGFloat ouncesOfAlcoholPerWineGlass = ouncesInOneWineGlass * alcoholPercentageOfWine;
-    CGFloat numberOfWineGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWineGlass;
+    AlcoholCalculation *result = [self.calculator calculateWithConcentration:alcoholPercentageOfBeer AndOuncePerContainer:ouncesInOneBeerGlass AndNumberOfContainer:numberOfBeers];
     
-    // decide singular /plural form
     NSString *beerText = (numberOfBeers == 1) ? NSLocalizedString(@"beer", @"singular beer") : NSLocalizedString(@"beers", @"plural of beer");
-    NSString *wineText = (numberOfWineGlassesForEquivalentAlcoholAmount == 1) ? NSLocalizedString(@"glass", @"singular glass") : NSLocalizedString(@"glasses", @"plural of glass");
     
-    // final text
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], numberOfWineGlassesForEquivalentAlcoholAmount, wineText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@ of wine.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], result.numberOfContainer, result.alcoholText];
     self.resultLabel.text = resultText;
 }
 
