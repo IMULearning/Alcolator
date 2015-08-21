@@ -90,6 +90,48 @@
                 </tapGestureRecognizer>
             </objects>
         </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="i8r-Mi-x8i">
+            <objects>
+                <viewController id="SVe-RU-rbQ" customClass="MainMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2i0-sc-EVH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ydw-qs-1D7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XFv-3d-v4D">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRV-HK-XE2">
+                                <rect key="frame" x="247" y="60" width="105" height="73"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="50"/>
+                                <state key="normal" title="Wine">
+                                    <color key="titleColor" red="0.44705882352941173" green="0.18431372549019609" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo6-eH-qkZ">
+                                <rect key="frame" x="220.5" y="153" width="159" height="76"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="50"/>
+                                <state key="normal" title="Whiskey">
+                                    <color key="titleColor" red="0.70196078431372544" green="0.40784313725490196" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Eo6-eH-qkZ" firstAttribute="top" secondItem="eRV-HK-XE2" secondAttribute="bottom" constant="20" id="Jdm-jm-T50"/>
+                            <constraint firstItem="eRV-HK-XE2" firstAttribute="centerX" secondItem="Eo6-eH-qkZ" secondAttribute="centerX" id="KUU-2F-80f"/>
+                            <constraint firstAttribute="centerX" secondItem="eRV-HK-XE2" secondAttribute="centerX" id="ie3-ba-sZV"/>
+                            <constraint firstItem="eRV-HK-XE2" firstAttribute="top" secondItem="2i0-sc-EVH" secondAttribute="bottom" constant="40" id="jJq-nO-lsW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YN7-fE-Yie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="-421"/>
+        </scene>
         <!--Whiskey View Controller-->
         <scene sceneID="mz8-kG-lzt">
             <objects>
