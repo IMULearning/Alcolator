@@ -30,6 +30,7 @@
     AlcoholCalculation *calculation = [AlcoholCalculation new];
     calculation.numberOfContainer = numberOfWhiskey;
     calculation.alcoholText = (numberOfWhiskey == 1) ? NSLocalizedString(@"shot of whiskey", @"singular shot") : NSLocalizedString(@"shots of whiskey", @"plural of shot");
+    calculation.containerText = (numberOfWhiskey == 1) ? NSLocalizedString(@"shot", @"singular shot") : NSLocalizedString(@"shots", @"plural of shot");
     
     return calculation;
 }

@@ -7,14 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlcoholCalculation.h"
 
 @interface ViewController : UIViewController
+
+@property (strong, nonatomic) NSString *navigationItemTextBase;
 
 @property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
 @property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 - (IBAction)buttonPressed:(UIButton *)sender;
+
+- (AlcoholCalculation *) doCalculate;
+- (NSInteger) getNumberOfContainers;
+- (CGFloat) getConcentration;
+- (NSString *) getBeerString;
 
 @end
 

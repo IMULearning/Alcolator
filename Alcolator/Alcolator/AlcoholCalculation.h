@@ -13,5 +13,6 @@
 
 @property (assign) CGFloat numberOfContainer;
 @property (nonatomic, strong) NSString *alcoholText;
+@property (nonatomic, strong) NSString *containerText;
 
 @end

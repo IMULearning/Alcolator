@@ -24,21 +24,15 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.navigationItemTextBase = @"Whiskey";
 }
 
 - (IBAction)buttonPressed:(UIButton *)sender {
     [self.beerPercentTextField resignFirstResponder];
     
-    NSInteger numberOfBeers = self.beerCountSlider.value;
-    NSInteger ouncesInOneBeerGlass = 12;
-    CGFloat alcoholPercentageOfBeer = [self.beerPercentTextField.text floatValue] / 100.0;
+    AlcoholCalculation *result = [super doCalculate];
     
-    AlcoholCalculation *result = [self.calculator calculateWithConcentration:alcoholPercentageOfBeer AndOuncePerContainer:ouncesInOneBeerGlass AndNumberOfContainer:numberOfBeers];
-    
-    NSString *beerText = (numberOfBeers == 1) ? NSLocalizedString(@"beer", @"singular beer") : NSLocalizedString(@"beers", @"plural of beer");
-    
-    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], result.numberOfContainer, result.alcoholText];
+    NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@.", nil), [super getNumberOfContainers], [super getBeerString],  [self.beerPercentTextField.text floatValue], result.numberOfContainer, result.alcoholText];
     self.resultLabel.text = resultText;
 }
 
