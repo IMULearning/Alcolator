@@ -7,13 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "AlcoholCalculator.h"
 #import "AlcoholCalculation.h"
 #import "WineCalculator.h"
 
 @interface ViewController ()
-
-@property (strong, nonatomic) WineCalculator *calculator;
 
 @end
 
@@ -21,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.calculator = [WineCalculator new];
 }
 
@@ -57,7 +53,7 @@
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], result.numberOfContainer, result.alcoholText];
     self.resultLabel.text = resultText;
     
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%.1f", ceilf(result.numberOfContainer)]];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) ceil(result.numberOfContainer)]];
 }
 
 - (IBAction)tapGestureDidFire:(UITapGestureRecognizer *)sender {

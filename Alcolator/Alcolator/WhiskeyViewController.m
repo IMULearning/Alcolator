@@ -11,8 +11,6 @@
 
 @interface WhiskeyViewController ()
 
-@property (strong, nonatomic) WhiskeyCalculator *calculator;
-
 @end
 
 @implementation WhiskeyViewController
@@ -40,6 +38,8 @@
     
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% alcohol) contains as much alcohol as %.1f %@.", nil), numberOfBeers, beerText,  [self.beerPercentTextField.text floatValue], result.numberOfContainer, result.alcoholText];
     self.resultLabel.text = resultText;
+    
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) ceil(result.numberOfContainer)]];
 }
 
 @end

@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlcoholCalculator.h"
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *beerPercentTextField;
 @property (weak, nonatomic) IBOutlet UISlider *beerCountSlider;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+
+@property (strong, nonatomic) id<AlcoholCalculator> calculator;
 
 - (IBAction)buttonPressed:(UIButton *)sender;
 
